@@ -10,6 +10,7 @@ module load gcc/6.3.0
 module load intel-psxe/2019-update1  #Installation of rjags required a intel compiler
 wget https://cran.r-project.org/src/base/R-4/R-4.1.0.tar.gz
 tar -xf R-4.1.0.tar.gz
+cd R-4.1.0
 ./configure --prefix=$HOME/R CPPFLAGS="-I/share/apps/bzip2/1.0.6/include -I/share/apps/xz/5.2.2/include -I/share/apps/pcre/8.3/include" LDFLAGS="-L/share/apps/bzip2/1.0.6/lib -L/share/apps/xz/5.2.2/lib -L/share/apps/pcre/8.3/lib" --with-readline=no --with-pcre1
 make
 path_to_R="export $HOME/R-4.1.0/bin"
