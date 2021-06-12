@@ -13,6 +13,6 @@ tar -xf R-4.1.0.tar.gz
 cd R-4.1.0
 ./configure --prefix=$HOME/R CPPFLAGS="-I/share/apps/bzip2/1.0.6/include -I/share/apps/xz/5.2.2/include -I/share/apps/pcre/8.3/include" LDFLAGS="-L/share/apps/bzip2/1.0.6/lib -L/share/apps/xz/5.2.2/lib -L/share/apps/pcre/8.3/lib" --with-readline=no --with-pcre1
 make
-path_to_R="export PATH=$HOME/R-4.1.0/bin:$"
+path_to_R="export PATH=\"$HOME/R-4.1.0/bin\":$"
 export_path_to_R=${path_to_R}PATH 
-echo $export_path_to_R >> ~/.bashrc
+echo "${export_path_to_R} >> ~/.bashrc
